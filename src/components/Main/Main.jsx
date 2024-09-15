@@ -73,7 +73,7 @@ const Main = () => {
                             />
                         )}
                         {name && (
-                            <p className='absolute bottom-[19rem] ml-4 left-1/2 -translate-x-1/2 font-bold text-2xl'>{name}</p>
+                            <p className='absolute bottom-[19rem] ml-4 left-1/2 -translate-x-1/2 font-bold text-4xl'>I, {name}</p>
                         )}
                     </div>
                     <div className='py-4 flex flex-col gap-4'>
