@@ -1,0 +1,90 @@
+.main {
+    flex: 1;
+    min-height: 100vh;
+    padding-bottom: 15vh;
+    position: relative;
+}
+
+.ikeji-banner {
+    width: 100%; 
+    overflow: hidden; 
+}
+
+.ikeji-banner img {
+    width: 100%; 
+    height: auto; 
+    display: block;
+    object-fit: cover;
+}
+
+
+
+.main-container {
+    max-width: 900px;
+    margin: auto;
+}
+
+/* Basic card styling */
+.card {
+    width: 800px; /* Fixed width for the card */
+    border: 1px solid #ddd; /* Light border around the card */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Ensures content doesn't overflow the card's rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+    background-color: #fff; /* Card background color */
+    margin: 20px auto; /* Center the card and add space around it */
+}
+
+/* Image inside the card */
+.card-img {
+    width: 100%; /* Image takes the full width of the card */
+    height: auto; /* Maintains aspect ratio */
+    display: block; /* Removes bottom margin space */
+}
+
+/* Content inside the card */
+.card-content {
+    padding: 15px; /* Adds padding inside the card for content */
+}
+
+/* Card title */
+.card-title {
+    font-size: 1.2em; /* Slightly larger font for title */
+    margin: 0 0 10px; /* Adds space below the title */
+    color: #333; /* Title text color */
+}
+
+/* Card description */
+.card-description {
+    font-size: 0.9em; /* Standard font size for description */
+    color: #666; /* Description text color */
+    margin: 0 0 15px; /* Adds space below the description */
+    line-height: 1.5; /* Improves readability */
+}
+
+/* Card button */
+.card-button {
+    display: inline-block; /* Allows for padding and other block-level styling */
+    padding: 10px 20px; /* Adds space inside the button */
+    color: #fff; /* Button text color */
+    background-color: #007bff; /* Button background color */
+    border: none; /* Removes default border */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Removes underline from links if used */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+/* Button hover effect */
+.card-button:hover {
+    background-color: #0056b3; /* Darkens button color on hover */
+}
+
+/* Card hover effect */
+.card:hover {
+    transform: translateY(-10px); /* Moves the card up slightly on hover */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Increases shadow for a lifted effect */
+}
+
+
