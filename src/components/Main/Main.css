@@ -1,124 +1,176 @@
-/* Center the whole page content */
-.main {
-  flex: 1;
-  min-height: 100vh;
-  padding: 2rem 1rem 15vh;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* centers child elements horizontally */
+/* Main Content Container */
+.main-content {
+  width: 100%;
+  max-width: 1200px;
+  padding: 1rem;
+  box-sizing: border-box;
 }
 
-/* Banner styling */
-.ikeji-banner {
-  width: 100%;
-  display: flex;
-  justify-content: center;
+/* Banner */
+.banner {
   margin-bottom: 1.5rem;
 }
 
-.ikeji-banner img {
-  max-width: 1200px; /* keeps banner from being too wide */
+.banner-img {
   width: 100%;
   height: auto;
-  display: block;
-  object-fit: cover;
   border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* DP generator container */
-.main-container {
-  width: 100%;
-  max-width: 900px;
+/* DP Generator Card */
+.dp-generator-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
   margin: 0 auto;
 }
 
-/* Basic card styling */
-.card {
-  width: 100%;
-  max-width: 800px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  background-color: #fff;
-  margin: 20px auto;
+.card-title {
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
 }
 
-.card-img {
+/* DP Form */
+.dp-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* DP Image Container */
+.dp-image-container {
+  position: relative;
+  width: 100%;
+}
+
+.dp-background {
   width: 100%;
   height: auto;
   display: block;
 }
 
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* Container for DP preview */
-#dp-image {
-  position: relative;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
-
-/* Uploaded user image */
-#dp-image img.uploaded-img {
+.uploaded-image {
   position: absolute;
-  top: 50%;
+  top: 51.5%;
   left: 50%;
-  width: 25%;
-  max-width: 150px;
-  height: auto;
-  border-radius: 50%;
-  object-fit: cover;
   transform: translate(-50%, -50%);
-  border: 4px solid #fff;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  width: 37.5%;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  object-fit: cover; /* Fills the circle without distortion */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-/* Name text */
-#dp-image p.dp-name {
+.user-name {
   position: absolute;
-  bottom: 12%;
+  bottom: 18%;
   left: 50%;
   transform: translateX(-50%);
   font-weight: bold;
-  font-size: clamp(1rem, 4vw, 2rem); /* responsive font size */
-  color: #000;
+  font-size: clamp(1rem, 4vw, 2.5rem); /* Responsive font size */
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
   text-align: center;
-  white-space: nowrap;
-  text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.8);
+  width: 100%;
 }
 
-/* ✅ Responsive Media Queries */
+/* Input Section */
+.input-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.input-title {
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.input-label {
+  font-weight: 500;
+}
+
+.input-field {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.upload-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  border: 1px dashed #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  justify-content: center;
+}
+
+.hidden-input {
+  display: none;
+}
+
+/* Download Button */
+.download-button {
+  background-color: #0046ca;
+  color: white;
+  padding: 0.75rem;
+  border-radius: 2rem;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s, opacity 0.3s;
+  width: 100%;
+  max-width: 250px;
+  margin: 1rem auto 0;
+}
+
+.download-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.download-button:hover:not(:disabled) {
+  background-color: #003baf;
+}
+
+/* Responsive Media Queries */
 @media (max-width: 768px) {
-  .card {
-    margin: 15px auto;
-    padding: 10px;
+  .dp-generator-card {
+    padding: 1rem;
   }
 
-  .main-container {
-    padding: 0.5rem;
+  .uploaded-image {
+    width: 40%; /* Adjusted for tablets */
+    top: 52%;
   }
 }
 
 @media (max-width: 480px) {
-  .card {
-    margin: 10px auto;
-    padding: 8px;
+  .card-title {
+    font-size: 1.125rem;
   }
 
-  .ikeji-banner img {
-    object-fit: contain;
+  .uploaded-image {
+    width: 43%; /* Adjusted for mobile */
+    top: 52.5%;
   }
 
-  .main {
-    padding: 1rem 0.5rem;
+  .user-name {
+    bottom: 15%;
   }
 }
