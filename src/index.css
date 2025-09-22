@@ -1,15 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-*{
-  padding: 0;
+/* Global Reset & Font */
+* {
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  font-family: Outfit;
+  font-family: 'Outfit', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
-#root{
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: #ffffff; /* You can change to theme color if needed */
+}
+
+#root {
   min-height: 100vh;
   display: flex;
+  flex-direction: column; /* so children can stack properly */
 }
