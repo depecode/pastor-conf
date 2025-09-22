@@ -14,14 +14,17 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   width: 100%;
-  background-color: #ffffff; /* You can change to theme color if needed */
+  background-color: #f0f2f5; /* Light gray background */
+  line-height: 1.5;
 }
 
 #root {
   min-height: 100vh;
   display: flex;
-  flex-direction: column; /* so children can stack properly */
+  flex-direction: column;
 }
+

@@ -1,11 +1,12 @@
 import React from 'react';
 import Main from './components/Main/Main';
+import './App.css';
 
 const App = () => {
   return (
-    <main>
+    <div className="app-container">
       <Main />
-    </main>
+    </div>
   );
 };
 
