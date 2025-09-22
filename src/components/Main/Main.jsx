@@ -67,34 +67,38 @@ const Main = () => {
     />
 
     {/* User Uploaded Image */}
-    {image && (
-      <img
-        src={image}
-        alt="Selected"
-        className="
-          absolute 
-          top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
-          rounded-full object-cover
-          border-4 border-white shadow-lg
+{image && (
+  <img
+    src={image}
+    alt="Selected"
+    className="
+      absolute
+      top-[33%] left-1/2 -translate-x-1/2
+      rounded-full object-cover
+      border-4 border-white shadow-lg
 
-          w-[180px] h-[180px]     /* default: small devices */
-          sm:w-[200px] sm:h-[200px]  /* small tablets */
-          md:w-[220px] md:h-[220px]  /* tablets */
-          lg:w-[240px] lg:h-[240px]  /* laptops */
-          xl:w-[280px] xl:h-[280px]  /* large desktops */
-        "
-      />
-    )}
+      w-[180px] h-[180px]    
+      sm:w-[200px] sm:h-[200px]  
+      md:w-[220px] md:h-[220px]  
+      lg:w-[240px] lg:h-[240px]  
+      xl:w-[280px] xl:h-[280px]  
+    "
+  />
+)}
 
     {/* User Name */}
     {name && (
-      <p
-        className="absolute bottom-[3rem] left-1/2 -translate-x-1/2 
-                   font-bold text-1xl md:text-2xl lg:text-3xl text-white drop-shadow"
-      >
-        {name}
-      </p>
-    )}
+  <p
+    className="
+      absolute 
+      bottom-[18%] left-1/2 -translate-x-1/2 
+      font-bold text-lg sm:text-xl md:text-2xl lg:text-3xl 
+      text-white drop-shadow text-center
+    "
+  >
+    {name}
+  </p>
+)}
   </div>
 
   {/* Input Section */}
